@@ -1,16 +1,15 @@
-function openModal(modalId) {
-    document.getElementById(`modal-${modalId}`).style.display = "block";
+function navigateTo(section) {
+  const element = document.getElementById(section);
+  element.scrollIntoView({ behavior: 'smooth' });
 }
 
-function closeModal(modalId) {
-    document.getElementById(`modal-${modalId}`).style.display = "none";
+function openModal() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'block';
 }
 
-window.onclick = function(event) {
-    const modals = document.getElementsByClassName('modal');
-    for (let i = 0; i < modals.length; i++) {
-        if (event.target == modals[i]) {
-            modals[i].style.display = "none";
-        }
-    }
+function cerrarFormulario() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'none';
 }
+
