@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campaña Personero - Jefferson Rodríguez Contreras</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campaña Personero - Jefferson Rodríguez Contreras</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Campaña Personero - Jefferson Rodríguez Contreras</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio" onclick="navigateTo('inicio')">Inicio</a></li>
-                <li><a href="#plan" onclick="navigateTo('plan')">Plan de Acción</a></li>
-                <li><a href="#problemas" onclick="navigateTo('problemas')">Problemáticas y Soluciones</a></li>
-                <li><a href="#actualizaciones" onclick="navigateTo('actualizaciones')">Actualizaciones</a></li>
-                <li><a href="#sugerencias" onclick="openModal()">Buzón de Sugerencias</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="main-content">
-        <!-- Contenido de la página -->
-    </main>
-    <div id="modal" class="modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 80%; background: white; box-shadow: 0px 0px 10px gray; padding: 20px;">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfI8Yxk0rj4L9xXKdZVfF6P4uZTgUgK5A/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-        <button onclick="cerrarFormulario()">Cerrar</button>
-    </div>
-    <script src="script.js"></script>
+<header>
+<h1>Campaña Personero - Jefferson Rodríguez Contreras</h1>
+<nav>
+<ul>
+<li><a href="#inicio" onclick="navigateTo('inicio')">Inicio</a></li>
+<li><a href="#plan" onclick="navigateTo('plan')">Plan de Acción</a></li>
+<li><a href="#problemas" onclick="navigateTo('problemas')">Problemáticas y Soluciones</a></li>
+<li><a href="#actualizaciones" onclick="navigateTo('actualizaciones')">Actualizaciones</a></li>
+<li><a href="#sugerencias" onclick="openModal()">Buzón de Sugerencias</a></li>
+</ul>
+</nav>
+</header>
+<main id="main-content">
+<section id="inicio" class="section">
+<!-- Contenido de la sección de inicio -->
+</section>
+<section id="plan" class="section" style="display:none;">
+<!-- Contenido de la sección de plan de acción -->
+</section>
+<section id="problemas" class="section" style="display:none;">
+<!-- Contenido de la sección de problemáticas y soluciones -->
+</section>
+<section id="actualizaciones" class="section" style="display:none;">
+<!-- Contenido de la sección de actualizaciones -->
+</section>
+</main>
+<div id="modal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 1000;">
+<div class="modal-content">
+<span class="close">&times;</span>
+<iframe src="https://forms.gle/rz1S5oraKyqbgjuk6" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+</div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
