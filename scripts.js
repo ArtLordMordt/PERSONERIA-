@@ -1,3 +1,4 @@
+
 // Función para cambiar de sección
 function cambiarSeccion(seccionId) {
   // Ocultar todas las secciones
@@ -7,7 +8,7 @@ function cambiarSeccion(seccionId) {
   });
 
   // Mostrar la sección seleccionada
-  const seccionSeleccionada = document.querySelector(`.seccion#${seccionId}`);
+  const seccionSeleccionada = document.getElementById(seccionId);
   seccionSeleccionada.classList.add('active');
 }
 
