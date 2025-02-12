@@ -15,36 +15,33 @@
         <li><a href="#plan">Plan de Acción</a></li>
         <li><a href="#problemas">Problemáticas y Soluciones</a></li>
         <li><a href="#actualizaciones">Actualizaciones</a></li>
-        <li><a href="#sugerencias" onclick="openModal()">Buzón de Sugerencias</a></li>
+        <li><a href="#" onclick="openModal()">Buzón de Sugerencias</a></li>
       </ul>
     </nav>
   </header>
   <main id="main-content">
     <section id="inicio" class="section">
-      <!-- Contenido de la sección de inicio -->
       <h2>Inicio</h2>
       <p>Bienvenido a mi campaña para Personero.</p>
     </section>
     <section id="plan" class="section">
-      <!-- Contenido de la sección de plan de acción -->
       <h2>Plan de Acción</h2>
       <p>Este es mi plan de acción para mejorar nuestra comunidad.</p>
     </section>
     <section id="problemas" class="section">
-      <!-- Contenido de la sección de problemáticas y soluciones -->
       <h2>Problemáticas y Soluciones</h2>
       <p>Estas son algunas de las problemáticas que enfrentamos y mis propuestas para solucionarlas.</p>
     </section>
     <section id="actualizaciones" class="section">
-      <!-- Contenido de la sección de actualizaciones -->
       <h2>Actualizaciones</h2>
       <p>Aquí te mantendré informado sobre los avances de mi campaña.</p>
     </section>
   </main>
+
   <!-- Modal para el formulario de sugerencias -->
   <div id="modal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close" onclick="closeModal()">&times;</span>
       <h2>Buzón de Sugerencias</h2>
       <form id="suggestionForm">
         <label for="mensaje">Escribe tu sugerencia:</label>
@@ -53,6 +50,7 @@
       </form>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
