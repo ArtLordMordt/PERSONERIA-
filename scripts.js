@@ -1,90 +1,36 @@
-/* Global Styles */
-:root {
---primary-color: #2c3e50;
---secondary-color: #3498db;
---accent-color: #e74c3c;
---background-color: #f5f6fa;
---text-color: #2c3e50;
+// Función para cambiar de sección
+function cambiarSeccion(seccionId) {
+  // Ocultar todas las secciones
+  const secciones = document.querySelectorAll('.seccion');
+  secciones.forEach(seccion => {
+    seccion.classList.remove('active');
+  });
+
+  // Mostrar la sección seleccionada
+  const seccionSeleccionada = document.getElementById(seccionId);
+  seccionSeleccionada.classList.add('active');
 }
 
-- {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+// Función para abrir el buzón de sugerencias
+function abrirBuzon() {
+  // Abrir el formulario de Google en una nueva pestaña
+  const url = 'https://forms.gle/rz1S5oraKyqbgjuk6';
+  window.open(url, '_blank');
 }
 
-body {
-font-family: 'Open Sans', sans-serif;
-line-height: 1.6;
-color: var(--text-color);
-background-color: var(--background-color);
-}
+// Agregar eventos a los botones de navegación
+const botonesNavegacion = document.querySelectorAll('nav ul li a');
+botonesNavegacion.forEach(boton => {
+  boton.addEventListener('click', function(event) {
+    event.preventDefault();
+    const seccionId = this.getAttribute('href').substring(1);
+    cambiarSeccion(seccionId);
+  });
+});
 
-/* Header Styles */
-header {
-background-color: var(--primary-color);
-color: white;
-padding: 1rem 0;
-position: sticky;
-top: 0;
-z-index: 100;
-}
-
-header h1 {
-text-align: center;
-font-family: 'Roboto', sans-serif;
-font-size: 1.8rem;
-margin-bottom: 1rem;
-}
-
-nav ul {
-display: flex;
-justify-content: center;
-list-style: none;
-flex-wrap: wrap;
-}
-
-nav ul li {
-margin: 0 1rem;
-}
-
-nav ul li a {
-color: white;
-text-decoration: none;
-padding: 0.5rem 1rem;
-border-radius: 4px;
-transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-background-color: var(--secondary-color);
-}
-
-/* Main Content Styles */
-main {
-max-width: 1200px;
-margin: 2rem auto;
-padding: 0 1rem;
-}
-
-.seccion {
-background-color: white;
-border-radius: 8px;
-padding: 2rem;
-margin-bottom: 2rem;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.seccion.active {
-display: block;
-}
-
-.seccion:not(.active) {
-display: none;
-}
-
-h2 {
-color: var(--primary-color);
-margin-bottom: 1.5rem;
-font-family: 'Roboto', sans-serif;
-}
+// Agregar evento al botón de buzón de sugerencias
+const botonBuzon = document.getElementById('buzonBtn');
+botonBuzon.addEventListener('click', function(event) {
+  event.preventDefault();
+  abrirBuzon();
+});
