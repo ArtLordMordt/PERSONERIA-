@@ -1,62 +1,66 @@
-// Navigation Functions
+// Función para navegar entre secciones
 function navigateTo(sectionId) {
-// Hide all sections
-const sections = document.querySelectorAll('.section');
-sections.forEach(section => {
-section.style.display = 'none';
-});
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => section.style.display = 'none');
 
-// Show selected section
-const selectedSection = document.getElementById(sectionId);
-if (selectedSection) {
-selectedSection.style.display = 'block';
-// Smooth scroll to section
-selectedSection.scrollIntoView({ behavior: 'smooth' });
+    const selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+        selectedSection.scrollIntoView({ behavior: 'smooth' });
+    }
 }
-}
-
-// Add event listeners to navigation buttons
-document.querySelectorAll('nav a').forEach(button => {
-button.addEventListener('click', function(event) {
-event.preventDefault();
-const sectionId = this.getAttribute('href').substring(1);
-navigateTo(sectionId);
-});
-});
 
 // Modal Functions
 function openModal() {
-const modal = document.getElementById('modal');
-modal.style.display = 'block';
+    document.getElementById('modal').style.display = 'block';
 }
 
 function closeModal() {
-const modal = document.getElementById('modal');
-modal.style.display = 'none';
+    document.getElementById('modal').style.display = 'none';
 }
 
-// Close modal when clicking outside
+// Cerrar modal al hacer clic fuera
 window.onclick = function(event) {
-const modal = document.getElementById('modal');
-if (event.target === modal) {
-closeModal();
-}
-}
+    const modal = document.getElementById('modal');
+    if (event.target === modal) {
+        closeModal();
+    }
+};
 
-// Form Submission
-document.getElementById('suggestionForm').addEventListener('submit', function(e) {
-e.preventDefault();
-// Get form data
-const mensaje = document.getElementById('mensaje').value;
-// Here you would typically send the data to a server
-// For now, we'll just show an alert
-alert('¡Gracias por tu sugerencia! La tendremos en cuenta.');
-// Clear form and close modal
-document.getElementById('mensaje').value = '';
-closeModal();
+// Cerrar modal con la tecla ESC
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        closeModal();
+    }
 });
 
-// Show initial section on page load
+// Manejo del formulario de sugerencias
+document.getElementById('suggestionForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const mensaje = document.getElementById('mensaje').value.trim();
+    if (mensaje === '') {
+        alert('Por favor, escribe una sugerencia antes de enviar.');
+        return;
+    }
+
+    alert('¡Gracias por tu sugerencia! La tendremos en cuenta.');
+    
+    document.getElementById('mensaje').value = ''; 
+    closeModal();
+});
+
+// Mostrar sección inicial basada en la URL
 document.addEventListener('DOMContentLoaded', function() {
-navigateTo('inicio');
+    const hash = window.location.hash.substring(1);
+    navigateTo(hash || 'inicio');
+});
+
+// Smooth scrolling para los enlaces del menú
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const sectionId = this.getAttribute('href').substring(1);
+        if (sectionId) navigateTo(sectionId);
+    });
 });
