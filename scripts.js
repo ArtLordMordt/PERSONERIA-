@@ -7,7 +7,7 @@ function cambiarSeccion(seccionId) {
   });
 
   // Mostrar la sección seleccionada
-  const seccionSeleccionada = document.getElementById(seccionId);
+  const seccionSeleccionada = document.querySelector(`.seccion#${seccionId}`);
   seccionSeleccionada.classList.add('active');
 }
 
