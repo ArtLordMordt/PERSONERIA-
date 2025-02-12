@@ -1,56 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campaña Personero - Jefferson Rodríguez Contreras</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaña Personero - Jefferson Rodríguez Contreras</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Campaña Personero - Jefferson Rodríguez Contreras</h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#plan">Plan de Acción</a></li>
-        <li><a href="#problemas">Problemáticas y Soluciones</a></li>
-        <li><a href="#actualizaciones">Actualizaciones</a></li>
-        <li><a href="#" onclick="openModal()">Buzón de Sugerencias</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main id="main-content">
-    <section id="inicio" class="section">
-      <h2>Inicio</h2>
-      <p>Bienvenido a mi campaña para Personero.</p>
-    </section>
-    <section id="plan" class="section">
-      <h2>Plan de Acción</h2>
-      <p>Este es mi plan de acción para mejorar nuestra comunidad.</p>
-    </section>
-    <section id="problemas" class="section">
-      <h2>Problemáticas y Soluciones</h2>
-      <p>Estas son algunas de las problemáticas que enfrentamos y mis propuestas para solucionarlas.</p>
-    </section>
-    <section id="actualizaciones" class="section">
-      <h2>Actualizaciones</h2>
-      <p>Aquí te mantendré informado sobre los avances de mi campaña.</p>
-    </section>
-  </main>
 
-  <!-- Modal para el formulario de sugerencias -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2>Buzón de Sugerencias</h2>
-      <form id="suggestionForm">
-        <label for="mensaje">Escribe tu sugerencia:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  </div>
+    <header>
+        <h1>Jefferson Rodríguez Contreras - Candidato a Personero</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#problemas">Problemáticas y Soluciones</a></li>
+                <li><a href="#actualizaciones">Actualizaciones</a></li>
+                <li><a href="#buzon">Buzón de Sugerencias</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <script src="script.js"></script>
+    <section id="inicio">
+        <h2>¡Hola a todos!</h2>
+        <p>Mi nombre es <strong>Jefferson Rodríguez Contreras</strong>, estudiante de grado once, y tengo 16 años. A lo largo de mi trayectoria en la institución, he aprendido que el verdadero liderazgo no se trata solo de dirigir, sino de escuchar, comprender y actuar en beneficio de todos.</p>
+        <p>Mi principal objetivo es ayudar a cada estudiante, brindando apoyo en lo académico, en lo personal y en la construcción de un ambiente escolar más justo y participativo. Creo firmemente en el trabajo en equipo y en el poder del diálogo para encontrar soluciones reales a las problemáticas que enfrentamos.</p>
+        <p>Si me das tu confianza, me comprometo a representar tus ideas, defender tus derechos y trabajar con responsabilidad para que nuestra voz sea escuchada. <strong>¡Juntos podemos hacer la diferencia!</strong></p>
+    </section>
+
+    <section id="problemas">
+        <h2>Plan de Acción para la Institución</h2>
+        <article>
+            <h3>Introducción</h3>
+            <p>El rol de un personero estudiantil no consiste solo en proponer cambios, sino en velar por los derechos de los estudiantes. Mi compromiso es trabajar en conjunto para generar mejoras significativas.</p>
+        </article>
+        
+        <article>
+            <h3>Estrategias de Financiamiento</h3>
+            <ul>
+                <li>Venta de productos alimenticios</li>
+                <li>Rifas con premios atractivos</li>
+                <li>Jean Day para recaudar fondos</li>
+                <li>Gestión ante entidades gubernamentales</li>
+            </ul>
+        </article>
+
+        <article>
+            <h3>Plan de Acción</h3>
+            <h4>1. Medio Ambiente y Salubridad</h4>
+            <ul>
+                <li>Reparación y reubicación de cestos de basura</li>
+                <li>Filtros para mejorar la calidad del agua</li>
+                <li>Campañas de concientización ambiental</li>
+            </ul>
+
+            <h4>2. Infraestructura y Servicios Básicos</h4>
+            <ul>
+                <li>Iluminación y ventilación en salones</li>
+                <li>Mantenimiento de baños y mobiliario</li>
+            </ul>
+
+            <h4>3. Bienestar y Convivencia Estudiantil</h4>
+            <ul>
+                <li>Charlas sobre salud mental</li>
+                <li>Canal anónimo de denuncias contra el bullying</li>
+            </ul>
+
+            <h4>4. Desarrollo Académico y Tecnológico</h4>
+            <ul>
+                <li>Creación de una página web para la comunidad estudiantil</li>
+                <li>Talleres de robótica</li>
+            </ul>
+
+            <h4>5. Cultura, Deporte y Participación</h4>
+            <ul>
+                <li>Organización de eventos culturales y deportivos</li>
+                <li>Compra de implementos deportivos</li>
+            </ul>
+        </article>
+    </section>
+
+    <section id="actualizaciones">
+        <h2>Actualizaciones del Gobierno Escolar</h2>
+        <p>Pronto se publicarán avances y gestiones realizadas.</p>
+    </section>
+
+    <section id="buzon">
+        <h2>Buzón de Sugerencias</h2>
+        <button onclick="abrirFormulario()">Enviar una sugerencia</button>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
