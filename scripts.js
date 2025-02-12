@@ -1,3 +1,25 @@
+document.addEventListener('DOMContentLoaded', function() {
+  // Show initial section on page load
+  navigateTo('inicio');
+
+  // Form Submission
+  const suggestionForm = document.getElementById('suggestionForm');
+  const mensajeGracias = document.getElementById('mensaje-gracias');
+  if (suggestionForm) {
+    suggestionForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const mensaje = document.getElementById('mensaje').value;
+      if (mensajeGracias) {
+        mensajeGracias.style.display = 'block';
+        mensajeGracias.textContent = '¡Gracias por tu sugerencia! La tendremos en cuenta.';
+      }
+      // Clear form and close modal
+      document.getElementById('mensaje').value = '';
+      closeModal();
+    });
+  }
+});
+
 // Navigation Functions
 function navigateTo(sectionId) {
   // Hide all sections
@@ -5,7 +27,6 @@ function navigateTo(sectionId) {
   sections.forEach(section => {
     section.style.display = 'none';
   });
-
   // Show selected section
   const selectedSection = document.getElementById(sectionId);
   if (selectedSection) {
@@ -39,33 +60,6 @@ document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
     closeModal();
   }
-});
-
-// Form Submission
-document.addEventListener('DOMContentLoaded', function() {
-  const suggestionForm = document.getElementById('suggestionForm');
-  const mensajeGracias = document.getElementById('mensaje-gracias');
-
-  if (suggestionForm) {
-    suggestionForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const mensaje = document.getElementById('mensaje').value;
-
-      if (mensajeGracias) {
-        mensajeGracias.style.display = 'block';
-        mensajeGracias.textContent = '¡Gracias por tu sugerencia! La tendremos en cuenta.';
-      }
-
-      // Clear form and close modal
-      document.getElementById('mensaje').value = '';
-      closeModal();
-    });
-  }
-});
-
-// Show initial section on page load
-document.addEventListener('DOMContentLoaded', function() {
-  navigateTo('inicio');
 });
 
 // Smooth scrolling for navigation links
