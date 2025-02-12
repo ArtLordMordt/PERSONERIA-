@@ -88,3 +88,10 @@ color: var(--primary-color);
 margin-bottom: 1.5rem;
 font-family: 'Roboto', sans-serif;
 }
+.seccion {
+  display: none; /* Oculta todas las secciones */
+}
+
+.seccion.active {
+  display: block; /* Solo la sección activa es visible */
+}
