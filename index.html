@@ -1,94 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campaña Personero - Jefferson Rodríguez Contreras</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campaña Personero - Jefferson Rodríguez Contreras</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
-        <h1>Jefferson Rodríguez Contreras - Candidato a Personero</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#problemas">Problemáticas y Soluciones</a></li>
-                <li><a href="#actualizaciones">Actualizaciones</a></li>
-                <li><a href="#buzon">Buzón de Sugerencias</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="inicio">
-        <h2>¡Hola a todos!</h2>
-        <p>Mi nombre es <strong>Jefferson Rodríguez Contreras</strong>, estudiante de grado once, y tengo 16 años. A lo largo de mi trayectoria en la institución, he aprendido que el verdadero liderazgo no se trata solo de dirigir, sino de escuchar, comprender y actuar en beneficio de todos.</p>
-        <p>Mi principal objetivo es ayudar a cada estudiante, brindando apoyo en lo académico, en lo personal y en la construcción de un ambiente escolar más justo y participativo. Creo firmemente en el trabajo en equipo y en el poder del diálogo para encontrar soluciones reales a las problemáticas que enfrentamos.</p>
-        <p>Si me das tu confianza, me comprometo a representar tus ideas, defender tus derechos y trabajar con responsabilidad para que nuestra voz sea escuchada. <strong>¡Juntos podemos hacer la diferencia!</strong></p>
+  <header>
+    <h1>Campaña Personero - Jefferson Rodríguez Contreras</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio" onclick="cambiarSeccion('inicio')">Inicio</a></li>
+        <li><a href="#plan" onclick="cambiarSeccion('plan')">Plan de Acción</a></li>
+        <li><a href="#problemas" onclick="cambiarSeccion('problemas')">Problemáticas y Soluciones</a></li>
+        <li><a href="#actualizaciones" onclick="cambiarSeccion('actualizaciones')">Actualizaciones</a></li>
+        <li><a id="buzonBtn" href="https://forms.gle/rz1S5oraKyqbgjuk6" target="_blank">Buzón de Sugerencias</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="inicio" class="seccion active">
+      <h2>Bienvenido a mi campaña</h2>
+      <p>Conoce mis propuestas para mejorar la institución y representar la voz de los estudiantes.</p>
     </section>
-
-    <section id="problemas">
-        <h2>Plan de Acción para la Institución</h2>
-        <article>
-            <h3>Introducción</h3>
-            <p>El rol de un personero estudiantil no consiste solo en proponer cambios, sino en velar por los derechos de los estudiantes. Mi compromiso es trabajar en conjunto para generar mejoras significativas.</p>
-        </article>
-        
-        <article>
-            <h3>Estrategias de Financiamiento</h3>
-            <ul>
-                <li>Venta de productos alimenticios</li>
-                <li>Rifas con premios atractivos</li>
-                <li>Jean Day para recaudar fondos</li>
-                <li>Gestión ante entidades gubernamentales</li>
-            </ul>
-        </article>
-
-        <article>
-            <h3>Plan de Acción</h3>
-            <h4>1. Medio Ambiente y Salubridad</h4>
-            <ul>
-                <li>Reparación y reubicación de cestos de basura</li>
-                <li>Filtros para mejorar la calidad del agua</li>
-                <li>Campañas de concientización ambiental</li>
-            </ul>
-
-            <h4>2. Infraestructura y Servicios Básicos</h4>
-            <ul>
-                <li>Iluminación y ventilación en salones</li>
-                <li>Mantenimiento de baños y mobiliario</li>
-            </ul>
-
-            <h4>3. Bienestar y Convivencia Estudiantil</h4>
-            <ul>
-                <li>Charlas sobre salud mental</li>
-                <li>Canal anónimo de denuncias contra el bullying</li>
-            </ul>
-
-            <h4>4. Desarrollo Académico y Tecnológico</h4>
-            <ul>
-                <li>Creación de una página web para la comunidad estudiantil</li>
-                <li>Talleres de robótica</li>
-            </ul>
-
-            <h4>5. Cultura, Deporte y Participación</h4>
-            <ul>
-                <li>Organización de eventos culturales y deportivos</li>
-                <li>Compra de implementos deportivos</li>
-            </ul>
-        </article>
+    <section id="plan" class="seccion">
+      <h2>Plan de Acción</h2>
+      <p>Este plan busca mejorar la calidad educativa, la convivencia y las condiciones generales de la institución.</p>
+      <ul>
+        <li>Medio Ambiente y Salubridad</li>
+        <li>Infraestructura y Servicios Básicos</li>
+        <li>Bienestar y Convivencia Estudiantil</li>
+        <li>Desarrollo Académico y Tecnológico</li>
+        <li>Cultura, Deporte y Participación Estudiantil</li>
+      </ul>
     </section>
-
-    <section id="actualizaciones">
-        <h2>Actualizaciones del Gobierno Escolar</h2>
-        <p>Pronto se publicarán avances y gestiones realizadas.</p>
+    <section id="problemas" class="seccion">
+      <h2>Problemáticas y Soluciones</h2>
+      <p>Aquí se presentan las principales problemáticas de la institución y sus soluciones propuestas.</p>
+      <ul>
+        <li>Cestos de basura en mal estado</li>
+        <li>Cuarto de separación de residuos desorganizado</li>
+        <li>Agua no apta para el consumo</li>
+        <li>Presencia de perros y gatos en la institución</li>
+        <li>Falta de conciencia ambiental y descuido de zonas comunes</li>
+      </ul>
     </section>
-
-    <section id="buzon">
-        <h2>Buzón de Sugerencias</h2>
-        <button onclick="abrirFormulario()">Enviar una sugerencia</button>
+    <section id="actualizaciones" class="seccion">
+      <h2>Actualizaciones</h2>
+      <p>Revisa los logros y avances del gobierno escolar en esta sección.</p>
     </section>
-
-    <script src="script.js"></script>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
