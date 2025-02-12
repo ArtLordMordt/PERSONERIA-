@@ -11,15 +11,8 @@ function cambiarSeccion(seccionId) {
   seccionSeleccionada.classList.add('active');
 }
 
-// Función para abrir el buzón de sugerencias
-function abrirBuzon() {
-  // Abrir el formulario de Google en una nueva pestaña
-  const url = 'https://forms.gle/rz1S5oraKyqbgjuk6';
-  window.open(url, '_blank');
-}
-
 // Agregar eventos a los botones de navegación
-const botonesNavegacion = document.querySelectorAll('nav ul li a');
+const botonesNavegacion = document.querySelectorAll('nav ul li a[href^="#"]');
 botonesNavegacion.forEach(boton => {
   boton.addEventListener('click', function(event) {
     event.preventDefault();
@@ -27,6 +20,13 @@ botonesNavegacion.forEach(boton => {
     cambiarSeccion(seccionId);
   });
 });
+
+// Función para abrir el buzón de sugerencias
+function abrirBuzon() {
+  // Abrir el formulario de Google en una nueva pestaña
+  const url = 'https://forms.gle/rz1S5oraKyqbgjuk6';
+  window.open(url, '_blank');
+}
 
 // Agregar evento al botón de buzón de sugerencias
 const botonBuzon = document.getElementById('buzonBtn');
