@@ -1,37 +1,63 @@
 
-// Función para cambiar de sección
-function cambiarSeccion(seccionId) {
-  // Ocultar todas las secciones
-  const secciones = document.querySelectorAll('.seccion');
-  secciones.forEach(seccion => {
-    seccion.classList.remove('active');
+// Navigation Functions
+function navigateTo(sectionId) {
+  // Hide all sections
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    section.style.display = 'none';
   });
 
-  // Mostrar la sección seleccionada
-  const seccionSeleccionada = document.getElementById(seccionId);
-  seccionSeleccionada.classList.add('active');
+  // Show selected section
+  const selectedSection = document.getElementById(sectionId);
+  if (selectedSection) {
+    selectedSection.style.display = 'block';
+    // Smooth scroll to section
+    selectedSection.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 
-// Función para abrir el buzón de sugerencias
-function abrirBuzon() {
-  // Abrir el formulario de Google en una nueva pestaña
-  const url = 'https://forms.gle/rz1S5oraKyqbgjuk6';
-  window.open(url, '_blank');
-}
-
-// Agregar eventos a los botones de navegación
-const botonesNavegacion = document.querySelectorAll('nav ul li a');
-botonesNavegacion.forEach(boton => {
-  boton.addEventListener('click', function(event) {
+// Add event listeners to navigation buttons
+document.querySelectorAll('nav a').forEach(button => {
+  button.addEventListener('click', function(event) {
     event.preventDefault();
-    const seccionId = this.getAttribute('href').substring(1);
-    cambiarSeccion(seccionId);
+    const sectionId = this.getAttribute('href').substring(1);
+    navigateTo(sectionId);
   });
 });
 
-// Agregar evento al botón de buzón de sugerencias
-const botonBuzon = document.getElementById('buzonBtn');
-botonBuzon.addEventListener('click', function(event) {
-  event.preventDefault();
-  abrirBuzon();
+// Modal Functions
+function openModal() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'block';
+}
+
+function closeModal() {
+  const modal = document.getElementById('modal');
+  modal.style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('modal');
+  if (event.target === modal) {
+    closeModal();
+  }
+}
+
+// Form Submission
+document.getElementById('suggestionForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Get form data
+  const mensaje = document.getElementById('mensaje').value;
+  // Here you would typically send the data to a server
+  // For now, we'll just show an alert
+  alert('¡Gracias por tu sugerencia! La tendremos en cuenta.');
+  // Clear form and close modal
+  document.getElementById('mensaje').value = '';
+  closeModal();
+});
+
+// Show initial section on page load
+document.addEventListener('DOMContentLoaded', function() {
+  navigateTo('inicio');
 });
