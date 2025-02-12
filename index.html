@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,46 +11,48 @@
     <h1>Campaña Personero - Jefferson Rodríguez Contreras</h1>
     <nav>
       <ul>
-        <li><a href="#inicio" onclick="navigateTo('inicio')">Inicio</a></li>
-        <li><a href="#plan" onclick="navigateTo('plan')">Plan de Acción</a></li>
-        <li><a href="#problemas" onclick="navigateTo('problemas')">Problemáticas y Soluciones</a></li>
-        <li><a href="#actualizaciones" onclick="navigateTo('actualizaciones')">Actualizaciones</a></li>
-        <li><a id="buzonBtn" href="https://forms.gle/rz1S5oraKyqbgjuk6" target="_blank">Buzón de Sugerencias</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#plan">Plan de Acción</a></li>
+        <li><a href="#problemas">Problemáticas y Soluciones</a></li>
+        <li><a href="#actualizaciones">Actualizaciones</a></li>
+        <li><a href="#sugerencias" onclick="openModal()">Buzón de Sugerencias</a></li>
       </ul>
     </nav>
   </header>
-  <main>
-    <section id="inicio" class="seccion active">
-      <h2>Bienvenido a mi campaña</h2>
-      <p>Conoce mis propuestas para mejorar la institución y representar la voz de los estudiantes.</p>
+  <main id="main-content">
+    <section id="inicio" class="section">
+      <!-- Contenido de la sección de inicio -->
+      <h2>Inicio</h2>
+      <p>Bienvenido a mi campaña para Personero.</p>
     </section>
-    <section id="plan" class="seccion">
+    <section id="plan" class="section">
+      <!-- Contenido de la sección de plan de acción -->
       <h2>Plan de Acción</h2>
-      <p>Este plan busca mejorar la calidad educativa, la convivencia y las condiciones generales de la institución.</p>
-      <ul>
-        <li>Medio Ambiente y Salubridad</li>
-        <li>Infraestructura y Servicios Básicos</li>
-        <li>Bienestar y Convivencia Estudiantil</li>
-        <li>Desarrollo Académico y Tecnológico</li>
-        <li>Cultura, Deporte y Participación Estudiantil</li>
-      </ul>
+      <p>Este es mi plan de acción para mejorar nuestra comunidad.</p>
     </section>
-    <section id="problemas" class="seccion">
+    <section id="problemas" class="section">
+      <!-- Contenido de la sección de problemáticas y soluciones -->
       <h2>Problemáticas y Soluciones</h2>
-      <p>Aquí se presentan las principales problemáticas de la institución y sus soluciones propuestas.</p>
-      <ul>
-        <li>Cestos de basura en mal estado</li>
-        <li>Cuarto de separación de residuos desorganizado</li>
-        <li>Agua no apta para el consumo</li>
-        <li>Presencia de perros y gatos en la institución</li>
-        <li>Falta de conciencia ambiental y descuido de zonas comunes</li>
-      </ul>
+      <p>Estas son algunas de las problemáticas que enfrentamos y mis propuestas para solucionarlas.</p>
     </section>
-    <section id="actualizaciones" class="seccion">
+    <section id="actualizaciones" class="section">
+      <!-- Contenido de la sección de actualizaciones -->
       <h2>Actualizaciones</h2>
-      <p>Revisa los logros y avances del gobierno escolar en esta sección.</p>
+      <p>Aquí te mantendré informado sobre los avances de mi campaña.</p>
     </section>
   </main>
+  <!-- Modal para el formulario de sugerencias -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Buzón de Sugerencias</h2>
+      <form id="suggestionForm">
+        <label for="mensaje">Escribe tu sugerencia:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
