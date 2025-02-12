@@ -1,16 +1,10 @@
-function openModal() {
-    document.getElementById("modal").style.display = "block";
-}
-
-function cerrarFormulario() {
-    document.getElementById("modal").style.display = "none";
-}
-
-// Assuming navigateTo function exists
-function navigateTo(sectionId) {
-    var sections = document.querySelectorAll('.section');
-    sections.forEach(function(section) {
-        section.style.display = 'none';
+function cambiarSeccion(seccionId) {
+    document.querySelectorAll('.seccion').forEach(seccion => {
+        seccion.classList.remove('activa');
     });
-    document.getElementById(sectionId).style.display = 'block';
+    document.getElementById(seccionId).classList.add('activa');
+}
+
+function abrirBuzon() {
+    window.open('https://forms.gle/rz1S5oraKyqbgjuk6', '_blank');
 }
