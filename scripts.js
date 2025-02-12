@@ -31,6 +31,7 @@ function abrirBuzon() {
 // Agregar evento al botón de buzón de sugerencias
 const botonBuzon = document.getElementById('buzonBtn');
 botonBuzon.addEventListener('click', function(event) {
-  event.preventDefault();
+  // No es necesario prevenir el comportamiento por defecto, ya que el enlace
+  // ya está configurado para abrir en una nueva pestaña.
   abrirBuzon();
 });
