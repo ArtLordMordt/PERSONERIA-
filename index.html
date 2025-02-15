@@ -8,18 +8,27 @@
 </head>
 <body>
     <header>
+        <img src="bandera.png" alt="Bandera de la Institución" class="bandera">
         <h1>Jefferson Rodríguez Contreras</h1>
-        <p>Estudiante de grado once - Personero Estudiantil</p>
+        <p>Estudiante de grado once - Personero Estudiantil | Tarjetón #02</p>
+        <nav>
+            <button onclick="mostrarSeccion('inicio')">Inicio</button>
+            <button onclick="mostrarSeccion('problematicas-soluciones')">Problemáticas y Soluciones</button>
+            <button onclick="mostrarSeccion('actualizaciones-gobierno')">Actualizaciones</button>
+            <button onclick="mostrarSeccion('denuncias-anonimas')">Denuncias</button>
+            <button onclick="mostrarSeccion('reporte-infraestructura')">Reportar Infraestructura</button>
+            <button onclick="mostrarSeccion('buzon-sugerencias')">Buzón de Sugerencias</button>
+        </nav>
     </header>
 
-    <section id="inicio">
+    <section id="inicio" class="seccion-activa">
         <h2>¡Hola a todos!</h2>
         <p>Mi nombre es Jefferson Rodríguez Contreras, estudiante de grado once, y tengo 16 años. A lo largo de mi trayectoria en la institución, he aprendido que el verdadero liderazgo no se trata solo de dirigir, sino de escuchar, comprender y actuar en beneficio de todos.</p>
         <p>Mi principal objetivo es ayudar a cada estudiante, brindando apoyo en lo académico, en lo personal y en la construcción de un ambiente escolar más justo y participativo. Creo firmemente en el trabajo en equipo y en el poder del diálogo para encontrar soluciones reales a las problemáticas que enfrentamos.</p>
         <p>Si me das tu confianza, me comprometo a representar tus ideas, defender tus derechos y trabajar con responsabilidad para que nuestra voz sea escuchada. ¡Juntos podemos hacer la diferencia!</p>
     </section>
 
-    <section id="problematicas-soluciones">
+    <section id="problematicas-soluciones" class="oculta">
         <h2>Plan de Acción para la Institución</h2>
         <h3>Introducción</h3>
         <p>El rol del personero estudiantil no consiste únicamente en proponer cambios que requieran financiamiento, sino en garantizar la defensa de los derechos de los estudiantes y servir como su voz dentro de la institución. Sin embargo, con el fin de mejorar las condiciones de la comunidad estudiantil, se impulsarán campañas y actividades sin intención lucrativa, pero con un impacto positivo.</p>
@@ -58,28 +67,107 @@
             <li>Mantenimiento de jardineras: Jornadas periódicas para mejorar la apariencia de los espacios verdes.</li>
         </ul>
 
-        <!-- Continúa con las demás secciones de problemáticas y soluciones -->
+        <h3>2. Infraestructura y Servicios Básicos</h3>
+        <h4>Problemas Identificados</h4>
+        <ul>
+            <li>Deficiencias en los baños: falta de iluminación, higiene, daños en sanitarios, puertas y lavamanos.</li>
+            <li>Falta de ventilación en los salones.</li>
+            <li>Iluminación deficiente en algunas áreas.</li>
+            <li>Deterioro de tabletas del piso y mobiliario.</li>
+        </ul>
+        <h4>Soluciones</h4>
+        <ul>
+            <li>Instalación de espejos, luces y pintura en los baños para mejorar su aspecto.</li>
+            <li>Reparación de sanitarios y lavamanos dañados.</li>
+            <li>Eliminación de mensajes de odio en las paredes con pintura y mantenimiento constante.</li>
+            <li>Reubicación del cuarto de herramientas en los baños de mujeres, sellando la entrada actual y creando una nueva en otro punto para evitar molestias.</li>
+            <li>Gestión con Ladrillera Versalles y ferreterías para donativos de materiales de reparación.</li>
+            <li>Instalación de ventiladores en salones calurosos y reemplazo de bombillas en espacios con poca luz.</li>
+            <li>Mantenimiento del mobiliario y pisos en mal estado.</li>
+            <li>Creación de un apartado web en la página del gobierno estudiantil para reportar problemas de infraestructura.</li>
+        </ul>
 
+        <h3>3. Bienestar y Convivencia Estudiantil</h3>
+        <h4>Problemas Identificados</h4>
+        <ul>
+            <li>Falta de comunicación entre estudiantes y el área de psicología.</li>
+            <li>Poca integración entre grados.</li>
+            <li>Presencia de bullying sin un canal seguro de denuncia.</li>
+            <li>Falta de espacios adecuados para el estudio y descanso.</li>
+        </ul>
+        <h4>Soluciones</h4>
+        <ul>
+            <li>Actuar como intermediario entre los estudiantes y la psicóloga, garantizando mayor acceso a acompañamiento psicológico.</li>
+            <li>Jornadas de integración entre grados con actividades extracurriculares e interdisciplinarias.</li>
+            <li>Creación de un canal físico y virtual para denuncias anónimas contra el bullying.</li>
+            <li>Mejor regulación de la biblioteca: Se evitará el ruido y se restringirá el acceso en descansos para fomentar un ambiente adecuado para el estudio.</li>
+        </ul>
+
+        <h3>4. Desarrollo Académico y Tecnológico</h3>
+        <h4>Problemas Identificados</h4>
+        <ul>
+            <li>Poco uso de tecnología en clases.</li>
+            <li>Métodos de enseñanza poco dinámicos.</li>
+            <li>Falta de material en la biblioteca.</li>
+            <li>Poca aplicación de conocimientos interdisciplinarios.</li>
+        </ul>
+        <h4>Soluciones</h4>
+        <ul>
+            <li>Implementación de cursos de robótica y circuitos tecnológicos.</li>
+            <li>Fomento del uso de herramientas digitales en la enseñanza.</li>
+            <li>Creación de un apartado exclusivo de química en la biblioteca, con implementos de seguridad y reactivos adecuados.</li>
+            <li>Charlas con docentes para promover metodologías de enseñanza más interactivas y enfocadas en el pensamiento crítico.</li>
+        </ul>
+
+        <h3>5. Cultura, Deporte y Participación Estudiantil</h3>
+        <h4>Problemas Identificados</h4>
+        <ul>
+            <li>Actividades recreativas poco llamativas.</li>
+            <li>Falta de material deportivo.</li>
+            <li>Baja participación estudiantil en decisiones.</li>
+            <li>Falta de espacios adecuados para el desarrollo de valores en los niños.</li>
+        </ul>
+        <h4>Soluciones</h4>
+        <ul>
+            <li>Organización de eventos culturales y deportivos mensuales.</li>
+            <li>Compra de balones y otros implementos deportivos.</li>
+            <li>Mejora en la gestión de interclases para un mejor desarrollo deportivo.</li>
+            <li>Reuniones periódicas del consejo estudiantil con participación activa de representantes de cada grado.</li>
+            <li>Actividades interactivas para inculcar valores en los niños menores.</li>
+        </ul>
+
+        <h3>6. Optimización del Programa de Alimentación Escolar</h3>
+        <h4>Problema Identificado</h4>
+        <ul>
+            <li>Desperdicio de comida y manipulación innecesaria de los alimentos.</li>
+        </ul>
+        <h4>Solución</h4>
+        <ul>
+            <li>Normativa para evitar el desperdicio: Se establecerá que los estudiantes que no deseen el alimento no lo reciban ni lo manipulen, reduciendo así la cantidad de comida tirada o desperdiciada.</li>
+        </ul>
+
+        <h3>Conclusión</h3>
+        <p>Este plan busca mejorar la calidad educativa, la convivencia y las condiciones generales de la institución. Se implementarán soluciones realistas y sostenibles mediante estrategias de financiamiento y gestión institucional, asegurando que todas las sedes sean beneficiadas. Se trabajará por un ambiente óptimo para el desarrollo académico y personal de todos los estudiantes.</p>
     </section>
 
-    <section id="actualizaciones-gobierno">
+    <section id="actualizaciones-gobierno" class="oculta">
         <h2>Actualizaciones de Gobierno</h2>
         <p>Aquí se irán subiendo las diferentes actualizaciones de todo lo que se vaya haciendo, un gobierno transparente donde se mostrará el transcurso de las cosas, de dónde se sacará el dinero, en qué se invertirá, etc.</p>
     </section>
 
-    <section id="denuncias-anonimas">
+    <section id="denuncias-anonimas" class="oculta">
         <h2>Denuncias Anónimas</h2>
         <p>Si tienes alguna denuncia relacionada con bullying o cualquier otro tema, puedes hacerla de forma anónima a través del siguiente formulario:</p>
         <a href="https://forms.gle/AatzEEqNid36TExV6" target="_blank">Formulario de Denuncias Anónimas</a>
     </section>
 
-    <section id="reporte-infraestructura">
+    <section id="reporte-infraestructura" class="oculta">
         <h2>Reporte sobre el Estado de la Infraestructura</h2>
         <p>Si encuentras algún problema con la infraestructura de la institución, repórtalo a través del siguiente formulario:</p>
         <a href="https://forms.gle/6nWEUySDFArgJHsKA" target="_blank">Formulario de Reporte de Infraestructura</a>
     </section>
 
-    <section id="buzon-sugerencias">
+    <section id="buzon-sugerencias" class="oculta">
         <h2>Buzón de Sugerencias</h2>
         <p>¿Tienes alguna sugerencia para mejorar la institución? Envíala a través del siguiente formulario:</p>
         <a href="https://forms.gle/rz1S5oraKyqbgjuk6" target="_blank">Formulario de Sugerencias</a>
